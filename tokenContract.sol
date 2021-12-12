@@ -3,7 +3,7 @@ pragma solidity ^0.4.21;
 import "./EIP20Interface.sol";
 
 
-contract TestToken is EIP20Interface {
+contract <-- choose token name here -->  is EIP20Interface {
 
     uint256 constant private MAX_UINT256 = 2**256 - 1;
     mapping (address => uint256) public balances;
@@ -52,7 +52,7 @@ contract TestToken is EIP20Interface {
 
     function approve(address _spender, uint256 _value) public returns (bool success) {
         allowed[msg.sender][_spender] = _value;
-        emit Approval(msg.sender, _spender, _value); //solhint-disable-line indent, no-unused-vars
+        emit Approval(msg.sender, _spender, _value);
         return true;
     }
 
